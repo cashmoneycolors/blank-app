@@ -1,0 +1,20 @@
+# Workspace Configuration für Visual Studio Code Insider
+
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "python.defaultInterpreterPath": "python3",
+        "python.terminal.activateEnvironment": true,
+        "terminal.integrated.defaultProfile.linux": "bash"
+    },
+    "extensions": {
+        "recommendations": [
+            "ms-python.python",
+            "ms-python.vscode-pylance"
+        ]
+    }
+}
