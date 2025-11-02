@@ -1,20 +1,60 @@
-# Workspace Configuration für Visual Studio Code Insider
-
 {
     "folders": [
         {
-            "path": "."
+            "path": ".",
+            "name": "Streamlit Python Project"
         }
     ],
     "settings": {
         "python.defaultInterpreterPath": "python3",
         "python.terminal.activateEnvironment": true,
-        "terminal.integrated.defaultProfile.linux": "bash"
+        "python.analysis.typeCheckingMode": "basic",
+        "python.linting.enabled": true,
+        "python.linting.flake8Enabled": true,
+        "python.formatting.provider": "black",
+        "[python]": {
+            "editor.formatOnSave": true,
+            "editor.defaultFormatter": "ms-python.black-formatter"
+        },
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "editor.rulers": [88],
+        "files.exclude": {
+            "**/__pycache__": true,
+            "**/*.pyc": true
+        },
+        "editor.inlineSuggest.enabled": true,
+        "editor.suggestSelection": "first",
+        "blackbox.enabled": true,
+        "blackbox.autoSuggest": true,
+        "blackbox.codeCompletion": true,
+        "blackbox.pythonSupport": true,
+        "blackbox.showInlineCompletions": true,
+        "blackbox.acceptSuggestionOnEnter": "on"
     },
     "extensions": {
         "recommendations": [
             "ms-python.python",
-            "ms-python.vscode-pylance"
+            "ms-python.vscode-pylance",
+            "ms-python.flake8",
+            "ms-python.black-formatter",
+            "Blackbox.blackbox",
+            "github.copilot",
+            "ms-vscode-remote.vscode-remote-extensionpack"
+        ]
+    },
+    "launch": {
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "name": "Streamlit App",
+                "type": "python",
+                "request": "launch",
+                "module": "streamlit",
+                "args": [
+                    "run",
+                    "${workspaceFolder}/streamlit_app.py"
+                ]
+            }
         ]
     }
 }
