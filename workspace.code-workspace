@@ -21,7 +21,15 @@
         "files.exclude": {
             "**/__pycache__": true,
             "**/*.pyc": true
-        }
+        },
+        "editor.inlineSuggest.enabled": true,
+        "editor.suggestSelection": "first",
+        "blackbox.enabled": true,
+        "blackbox.autoSuggest": true,
+        "blackbox.codeCompletion": true,
+        "blackbox.pythonSupport": true,
+        "blackbox.showInlineCompletions": true,
+        "blackbox.acceptSuggestionOnEnter": "on"
     },
     "extensions": {
         "recommendations": [
@@ -29,6 +37,7 @@
             "ms-python.vscode-pylance",
             "ms-python.flake8",
             "ms-python.black-formatter",
+            "Blackbox.blackbox",
             "github.copilot",
             "ms-vscode-remote.vscode-remote-extensionpack"
         ]
